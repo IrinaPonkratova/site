@@ -146,6 +146,15 @@ justify-content: center;
 
 
 }
+.hidden {
+    display: none ;
+}
+
+.burgerMenu:hover ~ .hidden {
+    display: flex;
+}
+
+
 .ul {
 
 font-size: 14px;
@@ -431,6 +440,7 @@ padding-left: 20px;
 font-size: 20px;
 font-weight: 400;
 line-height: 24px;
+text-align: center;
 
 
 }
@@ -539,6 +549,20 @@ margin-bottom: 30px;
     width: 148px;
     justify-content: space-between;
 }
+.iconFon {
+    background-color: white;
+    /* padding: 7px; */
+    width: 31px;
+    height: 31px;
+}
+.networks {
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+.iconFon:hover {
+    background-color: #F16D7F;
+}
 
 @media (min-width: 848px) and (max-width: 1146px)  {
     .container {
@@ -587,9 +611,9 @@ margin-bottom: 30px;
         line-height: 28.8px;
 
     }
-    .navMain {
+    /* .hidden {
         display: none ;
-    }
+    } */
 
     .cards {
     gap:19px;
@@ -691,11 +715,16 @@ gap: 16px;
     gap: 48px;
     background-color: #222224;
     flex-direction: column;
-    padding: 48px 204px 64px 204px;
+    padding: 0;
+
+    padding-top: 48px;
+    padding-bottom: 64px;
+    max-width: 768px;
 }
 .ourAdvantages {
     display: flex;
   flex-direction: column; 
+  padding: 0 204px 0 204px;
 
 
 }
@@ -706,11 +735,12 @@ gap: 16px;
 }
 
 .aside {
-    max-width: 100%;
+    /* max-width: 100%; */
     /* background-image: url(./img/bottomFon.png); */
     display: flex; 
   justify-content: center; 
   align-items: center; 
+  max-width: 768px;
 }
 
 
@@ -729,15 +759,13 @@ gap: 16px;
 }
 
 .asideLeft {
-    margin: 64px 204px 0 204px;
+    margin: 64px 0 0 0;
 }
 
 
 .asideRight {
-    /* margin-left: 105px;
-    margin-right: 105px;
-    margin-bottom: 140px; */
-    margin: 0 105px 140px 105px;
+    padding: 0;
+    margin: 0 0 140px 0;
 
 }
 
@@ -746,40 +774,21 @@ line-height: 38.88px;
 
 }
 
-
-
-/* .myForm input{
-    background-color: #E1E1E1;
-
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.8px;
-    display: flex;
-    padding-top: 7px;
-    padding-bottom: 6px;
-    border-radius: 20px 0 0 20px;
-    border: none;
-    padding: 18px;
-    padding-right: 64px;
-    
-
-}
-.myForm button {
-
-font-size: 14px;
-font-weight: 400;
-line-height: 16.8px;
-background-color: #F16D7F;
-color: #FFFFFF;
-border: none;
-border-radius: 0 20px 20px 0;
-padding: 18px;
-} */
-
 .footer {
-    padding-left: 32px;
-    padding-right: 32px;
+
+    max-width: 768px;
+    padding-left: 0;
+    padding-right: 0;
 }
+.footer h2 {
+    padding-left: 32px;
+
+}
+.footerNav {
+    padding-right: 33px;
+}
+
+
 
 }
 
@@ -843,14 +852,10 @@ padding: 18px;
         font-size: 20px;
         line-height: 24px;
     }
-    .navMain {
-        display: none ;
-    }
+
 
 .cards {
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr); */
+
     gap:32px;
     margin-bottom: 64px;
     flex-wrap: wrap;
@@ -945,5 +950,90 @@ grid-template-rows: repeat(6, 1fr);
     margin-bottom: 85px;
     margin-top: 40px;
 }
+
+
+.advantages {
+    flex-direction: column;
+    gap: 47px;
+    padding: 48px 13px 81px 13px;
+}
+
+
+.ourAdvantages p {
+    font-weight: 400;
+}
+.advLogo {
+    margin-bottom: 28px;
+    max-width: 100%; 
+    height: auto; 
+
+}
+.aside {
+    max-width: 375px;
+}
+
+.picture {
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 59px;
+    
+}
+.asideLeft {
+    margin: 64px 0 0 0;
+    text-align: center;
+
+    max-width: 340px;
+}
+.asideLeft img {
+    max-width: 91px;
+    max-height: 91px;
+
+}
+
+.asideRight {
+    margin: 0 10px 109px;
+    display: flex;
+
+
+}
+
+/* .form {
+    display: flex;
+    flex-direction: row;
+} */
+.myForm {
+    display: flex;
+    align-items: center;
+    /* padding-top: 7px;
+    padding-bottom: 6px; */
+
+}
+
+
+.footer {
+    background-color: #222224;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column-reverse;
+    gap: 40px;
+    max-width: 375px;
+    align-items: center;
+}
+.footer h2 {
+
+margin-top: 0;
+margin-bottom: 9px;
+
+
+}
+
+.footerNav {
+    margin-top: 43px;
+    margin-bottom: 0;
+    
+}
+
 
 }
